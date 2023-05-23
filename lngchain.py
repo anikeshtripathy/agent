@@ -6,26 +6,19 @@ import requests
 
 # Define the function to create the agent
 def create_agent(file_path):
-  """Creates an agent that can answer questions based on the content of a file.
-
-  Args:
-    file_path: The path to the file that contains the content of the agent.
-
-  Returns:
-    The agent object.
+  """Creates an agent that can answer questions based on the content of a file
   """
 
   # Read the file content
   with open(file_path, "r") as f:
     content = f.read()
-
-  # Create the agent object
+    
   agent = {
       "name": "Agent",
       "content": content,
   }
 
-  # Return the agent object
+  
   return agent
 
 # Define the function to answer a question
@@ -68,9 +61,9 @@ def main():
   # Answer the question
   answer = answer_question(agent, question)
 
-  # Print the answer
+  
   print(answer)
 
-# Run the main function
+
 if __name__ == "_main_":
   main()
